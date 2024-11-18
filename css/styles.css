@@ -342,11 +342,13 @@ padding: 120px 0 120px 0;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
+.portfolio-li:hover{
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .portfolio-li:hover .overley {
     transform: translatey(0);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-caption{
     font-weight: 500;
@@ -371,7 +373,9 @@ padding: 120px 0 120px 0;
 .footer-container {
     display: flex;
     align-items: baseline;
-    gap: 120px;
+}
+.footer-logo-container{
+    margin-right: 120px
 }
 
 
