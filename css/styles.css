@@ -51,6 +51,9 @@ button{
 }
 .header{
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .logo-conteiner{
@@ -176,6 +179,7 @@ button{
     height: 56px;
     border: none;
     margin: 0 auto;
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus{
@@ -235,6 +239,7 @@ border: 1px solid #8e8f99;
     display: flex;
     justify-content: center;
         align-items: center;
+        margin-bottom: 8px;
 }
 .team-item{
     background-color: #FFFFFF;
@@ -268,7 +273,7 @@ border: 1px solid #8e8f99;
                     justify-content: center;
                     align-items: center;
             gap: 24px;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link{
     display: flex;
@@ -279,7 +284,7 @@ border: 1px solid #8e8f99;
         border-radius: 50%;
         background-color:#4d5ae5;;
 }
-svg{
+.icon{
 fill: #f4f4fd;
 }
 .icon-link:hover,
@@ -309,37 +314,34 @@ padding: 120px 0 120px 0;
 .portfolio-li{
     width: calc((100% - 48px) / 3);
 }
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overley {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+}
 .portfolio-name{
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-.box {
-    position: relative;
-    overflow: hidden;
-    width: 360px;
-    background-color: #4d5ae5;
-}
-
-.overley {
-    padding: 40px 32px 0 ;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3f51b5;
-
-    transform: translatey(100%);
-    transition: transform 250ms ease-in-out;
-}
-
-.box:hover .overley {
+.portfolio-li:hover .overley {
     transform: translatey(0);
 }
 .portfolio-caption{
@@ -357,27 +359,19 @@ padding: 120px 0 120px 0;
         letter-spacing: 0.02em;
         color: #434455;
 }
-.footer-contenar{
-    display: flex;
+.footer {
+    background: #2e2f42;
+    padding: 100px 0;
 }
 
-.foter{
-background: #2e2f42;
-padding: 100px 0
-}
-.ocial-item{
+.footer-container {
     display: flex;
+    align-items: flex-start;
+    gap: 120px;
 }
-.social-item-list{
-    display: flex;
-}
-.icon-li{
-    display: flex;
-}
-.fot-item{ 
-    display: flexgi;
-}
-.logo-foot {
+
+
+.logo-footer {
     display: inline-block;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -388,12 +382,11 @@ padding: 100px 0
     color: #4d5ae5;
     margin-bottom: 16px;
 }
-
-.logo-foter {
+.logo-footer-highlight {
     color: #f4f4fd;
 }
 
-.footer-type {
+.footer-description {
     max-width: 264px;
     font-weight: 400;
     font-size: 16px;
@@ -401,11 +394,47 @@ padding: 100px 0
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
-.fot-item{
-    font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #fff;
+
+.social-section {
+    display: flex;
+    flex-direction: column;
 }
 
+.social-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.social-list {
+    display: flex;
+    gap: 16px;
+}
+
+.social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #31d0aa;
+}
+
+.social-icon {
+    fill: #f4f4fd;
+}
